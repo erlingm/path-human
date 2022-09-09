@@ -1,5 +1,7 @@
 package no.moldesoft.tools.path.human;
 
+import java.io.File;
+
 /**
  * Created by Erling Molde on 21.09.2015.
  */
@@ -17,7 +19,7 @@ public class HumanPath {
 
     private void execute() {
         String path = System.getenv("PATH");
-        String[] split = path.split(";");
+        String[] split = path.split(File.pathSeparator);
         System.out.printf("Path:%n");
         for (String s : split) {
             System.out.printf("\t%s%n", s);

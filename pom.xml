@@ -6,23 +6,32 @@
 
     <groupId>no.moldesoft.tools</groupId>
     <artifactId>path-human</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
 
-<build>
-    <finalName>showpath</finalName>
-    <plugins>
-        <plugin>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.6</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <mainClass>no.moldesoft.tools.path.human.HumanPath</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+    <build>
+        <finalName>showpath</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>no.moldesoft.tools.path.human.HumanPath</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
